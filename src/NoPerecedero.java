@@ -1,4 +1,6 @@
-
+/*
+ * NoPerecedero extiende de la clase abstracta Pedido, porque cuenta con atributos y métodos idénticos a los de Perecedero
+ * */
 public class NoPerecedero extends Producto {
 	private int porcentajeOferta;
 		
@@ -7,6 +9,7 @@ public class NoPerecedero extends Producto {
 		this.porcentajeOferta = super.modificador;
 	}
 	
+	/* Calcular el precio según su porcentaje de oferta */
 	float calcularPrecio(float precio, int porcentajeOferta) {
 		return precio - ((precio * porcentajeOferta) / 100);
 	}

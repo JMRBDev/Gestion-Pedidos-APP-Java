@@ -1,4 +1,6 @@
-
+/*
+ * Perecedero extiende de la clase abstracta Pedido, porque cuenta con atributos y métodos idénticos a los de NoPerecedero
+ * */
 public class Perecedero extends Producto {
 	private int tiempoParaCaducar;
 	
@@ -7,6 +9,7 @@ public class Perecedero extends Producto {
 		this.tiempoParaCaducar = super.modificador;
 	}
 	
+	/* Calcular el precio según su tiempo para caducar */
 	float calcularPrecio(float precio, int tiempoParaCaducar) {
 		switch (tiempoParaCaducar) {
 		case (1):

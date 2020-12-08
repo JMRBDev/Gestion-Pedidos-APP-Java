@@ -1,4 +1,7 @@
-
+/*
+ * De la clase Empleado se crea un objeto cuando un empleado se autentica correctamente en el sistema a través de gestionEmpleados.autenticar()
+ * Esto sirve para poder recoger datos del empleado que se encuentra autenticado, y poder poner su nombre en la factura por ejemplo.
+ * */
 public class Empleado {
 	private int codigo;
 	private String login;

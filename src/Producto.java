@@ -1,4 +1,6 @@
-
+/*
+ * Clase abstracta usada para los productos, ya que tanto Perecedero como NoPerecedero cuentan con atributos y métodos idénticos
+ * */
 public abstract class Producto {
 	int codigo;
 	String nombre;
@@ -15,9 +17,14 @@ public abstract class Producto {
 		this.modificador = Integer.parseInt(datosList[4]);
 	}
 	
+	/* calcularPrecio es común en Perecedero y NoPerecedero pero no son iguales internamente, así que la defino aquí para luego implementarla en las respectivas clases */
 	abstract float calcularPrecio(float precio, int modificador);
 	
 	public String toString() {
 		return this.codigo + " - " + this.nombre + " - " + this.precio + " - " +  this.unidades + " - " +  this.modificador;
+	}
+	
+	public void setUnidades(int nuevasUnidades) {
+		this.unidades -= nuevasUnidades;
 	}
 }

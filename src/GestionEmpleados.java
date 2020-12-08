@@ -3,10 +3,14 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * La clase GestionEmpleados se usa para todo lo referente a los distintos empleados del sistema, tanto cargar sus datos desde el fichero "empleados.txt", como autenticarlos, y también cambiar la contraseña.
+ * */
 public class GestionEmpleados {
 	ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 	
 	public GestionEmpleados() {
+		/* Cargar empleados */
 		try {
 			File empleadosFile = new File("empleados.txt");
 		    Scanner empleadosReader = new Scanner(empleadosFile);
