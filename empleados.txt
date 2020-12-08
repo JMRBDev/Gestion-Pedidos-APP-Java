@@ -1,0 +1,3 @@
+0:jose:jose:10
+1:ana:ana:15
+2:mario:mario:5
