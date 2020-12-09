@@ -10,7 +10,7 @@ public class Pedido {
 	public boolean anadirProducto(Producto producto, int unidades) {
 		if (unidades <= producto.unidades) { // Siempre y cuando la cantidad a añadir sea menor que la cantidad en stock:
 			productos.put(producto, unidades);
-			precioTotal += producto.precio * unidades;
+			precioTotal += producto.calcularPrecio(producto.precio, producto.modificador) * unidades;
 			return true;
 		}
 		
@@ -19,6 +19,10 @@ public class Pedido {
 
 	public float getPrecioTotal() {
 		return (float) Math.round(precioTotal * 100) / 100; // Redondeo a dos decimales
+	}
+	
+	public LinkedHashMap<Producto, Integer> getProductos() {
+		return this.productos;
 	}
 	
 	public String toString() {

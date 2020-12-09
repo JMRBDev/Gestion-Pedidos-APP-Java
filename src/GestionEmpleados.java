@@ -39,6 +39,6 @@ public class GestionEmpleados {
 	public void cambiarContrasena(Empleado empleado, String nuevaContrasena) {
 		String antiguaContrasena = empleados.get(empleados.indexOf(empleado)).getPassword();
 		empleados.get(empleados.indexOf(empleado)).setPassword(nuevaContrasena);
-		System.out.println("Contraseña \"" + antiguaContrasena + "\" cambiada a \"" + nuevaContrasena + "\"");
+		System.out.println("\nContraseña \"" + antiguaContrasena + "\" cambiada a \"" + nuevaContrasena + "\"");
 	}
 }

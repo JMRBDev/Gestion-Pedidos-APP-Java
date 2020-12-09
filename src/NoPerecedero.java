@@ -11,6 +11,10 @@ public class NoPerecedero extends Producto {
 	
 	/* Calcular el precio según su porcentaje de oferta */
 	float calcularPrecio(float precio, int porcentajeOferta) {
+		if (porcentajeOferta == 0) {
+			return precio;
+		}
+		
 		return precio - ((precio * porcentajeOferta) / 100);
 	}
 
